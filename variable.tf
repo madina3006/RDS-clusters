@@ -1,6 +1,3 @@
-# variable "aws_ssm_parameter_name" {
-#   default = "/devops/us-east-1/passwords/team1db-cluster"
-# }
 variable "instance_class" {
   type    = string
   default = "db.r4.large"
