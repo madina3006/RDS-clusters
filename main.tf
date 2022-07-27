@@ -15,7 +15,7 @@ resource "aws_rds_cluster" "default" {
   vpc_security_group_ids = [var.vpc_security_group_id]
 }
 resource "aws_rds_cluster_instance" "cluster_instances" {
-  db_subnet_group_name = aws_db_subnet_group.db_team4.name
+  db_subnet_group_name = aws_db_subnet_group.db_team1.name
   identifier         = "aurora-cluster-demo"
   cluster_identifier = aws_rds_cluster.default.cluster_identifier
   instance_class     = var.instance_class
@@ -23,7 +23,7 @@ resource "aws_rds_cluster_instance" "cluster_instances" {
   engine             = aws_rds_cluster.default.engine
 }
 resource "aws_rds_cluster_instance" "cluster_instances-writer" {
-  db_subnet_group_name = aws_db_subnet_group.db_team4.name
+  db_subnet_group_name = aws_db_subnet_group.db_team1.name
   identifier         = "aurora-cluster-demo-writer"
   cluster_identifier = aws_rds_cluster.default.cluster_identifier
   instance_class     = var.instance_class
@@ -31,7 +31,7 @@ resource "aws_rds_cluster_instance" "cluster_instances-writer" {
   engine             = var.engine
 }
 resource "aws_rds_cluster_instance" "cluster_instances-reader1" {
-  db_subnet_group_name = aws_db_subnet_group.db_team4.name
+  db_subnet_group_name = aws_db_subnet_group.db_team1.name
   identifier         = "aurora-cluster-demo-reader1"
   cluster_identifier = aws_rds_cluster.default.cluster_identifier
   instance_class     = var.instance_class
@@ -39,7 +39,7 @@ resource "aws_rds_cluster_instance" "cluster_instances-reader1" {
   engine             = var.engine
 }
 resource "aws_rds_cluster_instance" "cluster_instances-reader2" {
-  db_subnet_group_name = aws_db_subnet_group.db_team4.name
+  db_subnet_group_name = aws_db_subnet_group.db_team1.name
   identifier         = "aurora-cluster-demo-reader2"
   cluster_identifier = aws_rds_cluster.default.cluster_identifier
   instance_class     = var.instance_class
