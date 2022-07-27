@@ -46,6 +46,14 @@ resource "aws_rds_cluster_instance" "cluster_instances-reader2" {
   engine_version     = var.engine_version
   engine             = var.engine
 }
+resource "aws_rds_cluster_instance" "cluster_instances-reader3" {
+  db_subnet_group_name = aws_db_subnet_group.db_team1.name
+  identifier         = "aurora-cluster-demo-reader3"
+  cluster_identifier = aws_rds_cluster.default.cluster_identifier
+  instance_class     = var.instance_class
+  engine_version     = var.engine_version
+  engine             = var.engine
+}
 output "reader_endpoint" {
   value = aws_rds_cluster.default.reader_endpoint
 }
