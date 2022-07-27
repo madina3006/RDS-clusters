@@ -1,13 +1,3 @@
-# resource "random_password" "password" {
-#   length           = 30
-#   special          = false
-#   override_special = "_%@"
-# }
-# resource "aws_ssm_parameter" "team3db" {
-#   name  = var.aws_ssm_parameter_name
-#   type  = "SecureString"
-#   value = random_password.password.result
-# }
 resource "aws_db_subnet_group" "db_team4" {
   name       = var.aws_db_subnet_group_name
   subnet_ids = var.aws_db_subnet_group
