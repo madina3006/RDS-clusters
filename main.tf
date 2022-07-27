@@ -10,7 +10,7 @@ resource "aws_rds_cluster" "default" {
   master_username      = var.master_username
   # master_password      = random_password.password.result
   master_password      = var.master_password
-  db_subnet_group_name = aws_db_subnet_group.db_team4.name
+  db_subnet_group_name = aws_db_subnet_group.db_team1.name
   skip_final_snapshot  = true
   vpc_security_group_ids = [var.vpc_security_group_id]
 }
