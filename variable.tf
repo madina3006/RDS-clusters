@@ -16,7 +16,7 @@ variable "database_name" {
   default = "dbname"
 }
 variable "master_username" {
-  default = "team3db"
+  default = "team1db"
 }
 variable "name" {
   type    = string
