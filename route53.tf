@@ -7,7 +7,7 @@ resource "aws_route53_record" "write1" {
   type    = "CNAME"
   ttl     = "300"
   records = [
-      aws_rds_cluster.default.endpoint
+    aws_rds_cluster.default.endpoint
   ]
 }
 resource "aws_route53_record" "read1" {
@@ -26,7 +26,7 @@ resource "aws_route53_record" "read_instance1" {
   ttl     = "300"
   records = [
     aws_rds_cluster_instance.cluster_instances-writer.endpoint
-    ]
+  ]
 }
 resource "aws_route53_record" "read_instance2" {
   zone_id = aws_route53_zone.primary.zone_id
@@ -43,6 +43,6 @@ resource "aws_route53_record" "read_instance3" {
   type    = "CNAME"
   ttl     = "300"
   records = [
-   aws_rds_cluster_instance.cluster_instances-reader2.endpoint
+    aws_rds_cluster_instance.cluster_instances-reader2.endpoint
   ]
 }

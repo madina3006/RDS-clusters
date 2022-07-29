@@ -1,8 +1,8 @@
-output "reader_endpoint" {
+output "reader_endpoint1" {
   value = aws_rds_cluster.default.reader_endpoint
 }
 
-output "writer_endpoint" {
+output "writer_endpoint1" {
   value = aws_rds_cluster.default.endpoint
 }
 

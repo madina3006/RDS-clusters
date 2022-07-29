@@ -19,27 +19,27 @@ variable "master_username" {
   default = "team1db"
 }
 variable "name" {
-  type    = string
+  type = string
 }
 variable "vpc_id" {
-  type    = string
+  type = string
 }
 variable "subnet_ids" {
-  type    = list
+  type = list(string)
 }
 variable "allowed_security_groups" {
-  type    = list
+  type = list(string)
 }
 variable "allowed_cidr_blocks" {
-  type    = list
+  type = list(string)
 }
 variable "region" {
-  type    = string
+  type = string
 }
 variable "aws_route53_zone" {
-  type    = string
+  type = string
 }
-# Team 3.
+# Team 1.
 variable "master_password" {}
 variable "aws_db_subnet_group_name" {}
 variable "aws_db_subnet_group" {}
