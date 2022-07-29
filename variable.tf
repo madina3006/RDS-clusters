@@ -39,7 +39,7 @@ variable "region" {
 variable "aws_route53_zone" {
   type = string
 }
-# Team 1.
+# Team 1_project
 variable "master_password" {}
 variable "aws_db_subnet_group_name" {}
 variable "aws_db_subnet_group" {}
