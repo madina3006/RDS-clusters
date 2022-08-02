@@ -1,6 +1,6 @@
 resource "aws_db_subnet_group" "db_team1" {
   name       = var.aws_db_subnet_group_name
-  subnet_ids = var.aws_db_subnet_group
+  subnet_ids = var.subnet_ids
 }
 resource "aws_rds_cluster" "default" {
   cluster_identifier = var.aws_cluster_identifier
