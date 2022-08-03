@@ -2,6 +2,9 @@ variable "instance_class" {
   type    = string
   default = "db.r4.large"
 }
+variable "aws_cluster_identifier"{
+  default = "dbname"
+}
 variable "aws_cluster_identifier-reader1" {
   default = "dbname"
 }
@@ -42,19 +45,16 @@ variable "allowed_cidr_blocks" {
 variable "region" {
   type = string
 }
-# variable "aws_route53_zone_id" {
-#   type = string
-# }
-# Team 1_project
+
 variable "master_password" {
   default = "Str0ngP4ssw0rD"
 }
 variable "aws_db_subnet_group_name" {
-  type = list(string)
+  type = string
 }
 
 variable "vpc_security_group_id" {
-  type = list(string)
+  type = string
 }
 
 
