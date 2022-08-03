@@ -2,7 +2,13 @@ variable "instance_class" {
   type    = string
   default = "db.r4.large"
 }
-variable "aws_cluster_identifier" {
+variable "aws_cluster_identifier-reader1" {
+  default = "dbname"
+}
+variable "aws_cluster_identifier-reader2" {
+  default = "dbname"
+}
+variable "aws_cluster_identifier-reader3" {
   default = "dbname"
 }
 variable "engine" {
