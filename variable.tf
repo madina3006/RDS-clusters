@@ -37,15 +37,14 @@ variable "subnet_ids" {
   type = list(string)
 }
 variable "allowed_security_groups" {
-  type = list(string)
+  type = string
 }
-variable "allowed_cidr_blocks" {
-  type = list(string)
-}
+#variable "allowed_cidr_blocks" {
+  #type = list(string)
+#}
 variable "region" {
   type = string
 }
-
 variable "master_password" {
   default = "Str0ngP4ssw0rD"
 }
