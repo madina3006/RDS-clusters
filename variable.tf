@@ -2,7 +2,7 @@ variable "instance_class" {
   type    = string
   default = "db.r4.large"
 }
-variable "aws_cluster_identifier"{
+variable "aws_cluster_identifier" {
   default = "dbname"
 }
 variable "aws_cluster_identifier-reader1" {
@@ -40,7 +40,7 @@ variable "allowed_security_groups" {
   type = string
 }
 #variable "allowed_cidr_blocks" {
-  #type = list(string)
+#type = list(string)
 #}
 variable "region" {
   type = string
