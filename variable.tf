@@ -22,7 +22,7 @@ variable "engine" {
   type    = string
 }
 variable "engine_version" {
-  default = "5.6.10a"
+  default = "8.0.28"
 }
 variable "database_name" {
   default = "dbname"
@@ -57,6 +57,10 @@ variable "aws_db_subnet_group_name" {
 
 variable "vpc_security_group_id" {
   type = string
+}
+
+variable "allocated_storage" {
+  type = number
 }
 
 # variable "DOMAIN" {

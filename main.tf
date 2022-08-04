@@ -3,17 +3,21 @@ resource "aws_db_subnet_group" "db_team1" {
   subnet_ids = var.subnet_ids
 }
 resource "aws_rds_cluster" "default" {
-  cluster_identifier = var.aws_cluster_identifier
-  engine             = var.engine
-  engine_version     = var.engine_version
-  database_name      = var.database_name
-  master_username    = var.master_username
+  cluster_identifier        = var.aws_cluster_identifier
+  engine                    = var.engine
+  db_cluster_instance_class = var.instance_class
+  database_name             = var.database_name
+  storage_type              = "io1"
+  allocated_storage         = 100
+  iops                      = 1000
+  master_username           = var.master_username
   # master_password      = random_password.password.result
   master_password        = var.master_password
   db_subnet_group_name   = aws_db_subnet_group.db_team1.name
   skip_final_snapshot    = true
   vpc_security_group_ids = [var.vpc_security_group_id]
 }
+
 resource "aws_rds_cluster_instance" "cluster_instances" {
   db_subnet_group_name = aws_db_subnet_group.db_team1.name
   identifier           = "aurora-cluster-demo"
