@@ -14,8 +14,8 @@ enable_dns_support      = true
 #allowed_cidr_blocks     = "0.0.0.0/0"
 allowed_security_groups = "default"
 subnet_ids = [
-  "subnet-0a515b9f1e1e8b655",
+  "SUBNET-IDS",
 ]
 aws_db_subnet_group_name = "project_sg"
-vpc_id                   = "vpc-0f201aa4e5f9a48e7"
-vpc_security_group_id    = "sg-01e250265f4923092"
+vpc_id                   = "VPC-ID"
+vpc_security_group_id    = "SECURITY-GROUP-ID "
