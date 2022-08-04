@@ -14,6 +14,9 @@ variable "aws_cluster_identifier-reader2" {
 variable "aws_cluster_identifier-reader3" {
   default = "dbname"
 }
+variable "aws_cluster_identifier-writer" {
+  default = "dbname"
+}
 variable "engine" {
   default = "aurora"
   type    = string
@@ -56,6 +59,20 @@ variable "vpc_security_group_id" {
   type = string
 }
 
+# variable "DOMAIN" {
+#   type = string
+# }
+
+# variable "ZONEID" {
+#   type = string
+# }
+# # variable "vpc_id" {
+# #   type = string
+# # }
+
+# # variable "subnet_ids" {
+# #   type = string
+# # }
 
 
 

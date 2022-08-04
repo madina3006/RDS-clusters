@@ -1,9 +1,9 @@
 dev.tfvars: 
-region                  = "us-east-1"
+region                  = "eu-west-2"
 allocated_storage       = 20
 engine                  = "mysql"
-engine_version          = "5.7"
-instance_class          = "db.t3.micro"
+engine_version          = "8.0.28"
+instance_class          = "db.t2.micro"
 db_name                 = "mydb"
 name                    = "mydb"
 username                = "foo"

@@ -11,7 +11,7 @@ output "aws_db_subnet_group" {
 }
 
 output "aws_rds_cluster" {
-  value = aws_rds_cluster.default
+  value     = aws_rds_cluster.default
   sensitive = true
 }
 
