@@ -1,3 +1,5 @@
+### Copy paste this code.
+```
 dev.tfvars: 
 region                  = "eu-west-2"
 allocated_storage       = 20
@@ -19,3 +21,4 @@ subnet_ids = [
 aws_db_subnet_group_name = "project_sg"
 vpc_id                   = "VPC-ID"
 vpc_security_group_id    = "SECURITY-GROUP-ID "
+,,,
